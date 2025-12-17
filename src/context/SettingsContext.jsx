@@ -19,7 +19,7 @@ export const SettingsProvider = ({ children }) => {
   });
   
   const [connections, setConnections] = useState({
-    supabase: false,
+    supabase: true,  // Auto-enable Supabase with default credentials
     wrike: false,
     googleCalendar: false,
     googleChat: false
