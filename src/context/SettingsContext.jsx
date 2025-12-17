@@ -30,6 +30,20 @@ export const SettingsProvider = ({ children }) => {
   // Load settings from localStorage on mount
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
+        
+    // Clear old settings with outdated Supabase key
+    if (saved) {
+      try {
+        const check = JSON.parse(saved);
+        const oldKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ndndxaWJmcHZnZGxxenl2eXJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMzNTcxOTYsImV4cCI6MjA0ODkzMzE5Nn0.V_bM5jcDuN62VZHnhPTdOgcAVXvtD3gBgM0nAkBqNks';
+        if (check?.supabase?.key === oldKey) {
+          localStorage.removeItem(STORAGE_KEY);
+          window.location.reload();
+          return;
+        }
+      } catch (e) { }
+    }
+    
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
