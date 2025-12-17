@@ -10,7 +10,7 @@ const STORAGE_KEY = 'doctors-pay-settings';
 
 export const SettingsProvider = ({ children }) => {
   const [settings, setSettings] = useState({
-    supabase: { url: 'https://ogvwqibfpvgdlqzyvyrk.supabase.co', key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ndndxaWJmcHZnZGxxenl2eXJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMzNTcxOTYsImV4cCI6MjA0ODkzMzE5Nn0.V_bM5jcDuN62VZHnhPTdOgcAVXvtD3gBgM0nAkBqNks'
+    supabase: { url: 'https://ogvwqibfpvgdlqzyvyrk.supabase.co', key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ndndxaWJmcHZnZGxxenl2eXJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY3MDc4NzEsImV4cCI6MjA1MjI4Mzg3MX0.OFKZDpF5MnRhfL3cBrT9WrPJYmjLuYbD1MxnNf8bHyo'
               },
     wrike: { token: '', folderId: '4333116655' },
     googleCalendar: { clientId: '' },
